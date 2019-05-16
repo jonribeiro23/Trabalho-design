@@ -1,0 +1,151 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: green;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-rows: minmax(4.35rem,auto);
+	grid-gap: 1rem;
+	justify-items: stretch;
+	align-items: stretch;
+}
+
+header{
+	grid-column: 2/12;
+	grid-row: 1/2;
+	position: sticky;
+	top: 0;
+	z-index: 900;
+}
+
+
+/* slider */
+.b2{	
+	grid-column: 2/12;
+	grid-row: 2/8;	
+}
+
+#first{
+	background-image: url('../img/p1.jpg');
+	background-color: rgba(0,0,0,0.5);
+	background-position: center;
+	background-clip: border-box;
+	background-size: cover;
+}
+
+#sec{
+	background-image: url('../img/pizza2.jpg');
+	background-position: center;
+	background-clip: border-box;
+	background-size: cover;
+}
+
+#third{
+	background-image: url('../img/p3.jpg');
+	background-position: center;
+	background-clip: border-box;
+	background-size: cover;
+}
+
+/* Promoções */
+main{
+	grid-row: 8/10;
+	grid-column: 2/12;
+
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: minmax(3rem);
+	grid-gap: 1em;
+}
+
+.img-fluid{
+	max-width: 100%;
+	height: auto;
+}
+
+#promocoes{
+	grid-column: 1/4;
+	grid-row: 1/2;
+	color: white;
+	margin-top: 1em;
+}
+
+#conteudo1{
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+#conteudo2{
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+#conteudo3{
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+
+#delivery{
+	grid-column: 1/4;
+	grid-row: 3/4;
+	color: white;
+	margin-top: 1em;
+}
+
+#link1{
+	grid-column: 1/2;
+	grid-row: 4/5;
+}
+
+#link2{
+	grid-column: 2/3;
+	grid-row: 4/5;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#link3{
+	grid-column: 3/4;
+	grid-row: 4/5;
+}
+
+#txt1{
+	grid-column: 1/2;
+	grid-row: 5/6;
+	text-align: center;
+	background-color: yellow;
+	border-radius: 20px;
+	padding: 5px;
+}
+
+#txt2{
+	grid-column: 2/3;
+	grid-row: 5/6;
+	text-align: center;
+	background-color: yellow;
+	border-radius: 20px;
+	padding: 5px;
+}
+
+#txt3{
+	grid-column: 3/4;
+	grid-row: 5/6;
+	text-align: center;
+	background-color: yellow;
+	border-radius: 20px;
+	padding: 5px;
+}
+
+footer{
+	grid-column: 1/13;
+	grid-row: 10/11;
+	width: 100%;
+	height: 100px;
+	background-color: red;
+}
