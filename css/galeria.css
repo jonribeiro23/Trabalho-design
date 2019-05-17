@@ -1,0 +1,107 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: green;
+	font-family: "Lato", Arial, Verdana;
+	font-size: 20px;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-rows: minmax(4.35rem,auto);
+	grid-gap: 1rem;
+	justify-items: stretch;
+	align-items: stretch;
+}
+
+header{
+	grid-column: 2/12;
+	grid-row: 1/2;
+	position: sticky;
+	top: 0;
+	z-index: 900;
+}
+
+main{
+	grid-column: 2/12;
+	grid-row: 2/6;
+
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: minmax(3rem);
+	grid-gap: 1em;
+}
+
+/* FILA 1 */
+#im1{
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+#im2{
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+#im3{
+	grid-column: 3/4;
+	grid-row: 1/2;
+}
+
+/* FILA 2 */
+#im4{
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+#im5{
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+#im6{
+	grid-column: 3/4;
+	grid-row: 2/3;
+}
+
+/* FILA 3 */
+#im7{
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+
+#im8{
+	grid-column: 2/3;
+	grid-row: 3/4;
+}
+
+#im9{
+	grid-column: 3/4;
+	grid-row: 3/4;
+}
+
+.img-fluid{
+	max-width: 100%;
+	height: auto;
+}
+
+.zoom{
+	overflow: hidden;
+}
+
+.zoom img{
+	max-width: 100%;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.zoom:hover img{
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+}
